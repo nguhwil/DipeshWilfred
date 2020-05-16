@@ -1,3 +1,7 @@
+*{
+    font-family: sans-serif;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -5,6 +9,7 @@ header{
     right: 0;
     padding: 10px;
     margin: 0 40px;
+    z-index: 100;
 }
 
 #header-img{
@@ -23,6 +28,16 @@ header{
     color: inherit;
 }
 
+#form, #heading{
+    text-align: center;
+}
+
+#form input[type="email"]{
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 60%;
+}
+
 main{
     position: relative;
     top: 60px;
@@ -30,23 +45,61 @@ main{
     margin: auto;
 }
 
-@media(max-width: 600px){
+#features{
+    display: block;
+
+}
+.features-item{
+    display: flex;
+    margin: 20px 0;
+
+}
+.features-item .icon{
+    margin-right: 30px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.features-item .fa{
+    color: rgb(241, 166, 4);
+}
+
+@media screen and (max-width: 600px){
     body {
         font-size: 80px;
     }
 }
 
+#how{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #how iframe{
-    height: 400px;
+    height: 300px;
     width: 60%;
-    margin: auto;
+    margin: 20px 0;
 
 }
 
 #price{
     display: flex;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#price div{
+    text-align: center;
+}
+
+#price h3{
+    background: #ccc;
+}
+
+#price ol{
+    list-style: none;
 }
     
 .btn {
@@ -54,7 +107,9 @@ main{
     background-color: rgb(241, 166, 4);
     font-weight: bold;
     border-radius: 5px;
-    height: 18px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
 }
 
 .btn:hover {
@@ -73,6 +128,7 @@ main{
     border-width: 2px;
     padding-bottom: 10px;
     width: 32%;
+    border-radius: 5px;
 
 }
 
@@ -82,8 +138,9 @@ footer {
     align-items: flex-end;
     flex-direction: column;
     padding: 10px;
-    margin-top: 80px;
     padding-bottom: 0px;
+    width: 60%;
+    margin: 80px auto 0 auto;
     
 }
 footer p {
@@ -94,5 +151,9 @@ footer p {
 
 #nav-foot {
     display: flex;
-    grid-gap: 10px;
+}
+#nav-foot a{
+    padding: 5px 10px;
+    color: inherit;
+    text-decoration: none;
 }
