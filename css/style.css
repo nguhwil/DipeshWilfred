@@ -26,4 +26,22 @@ header{
 main{
     position: relative;
     top: 60px;
+    width: 60%;
+    margin: auto;
+}
+
+@media (max-width: 700px){
+    main{
+        width: 100%;
+    }
+}
+#how iframe{
+    height: 600px;
+    width: 100%;
+}
+
+#price{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
 }
